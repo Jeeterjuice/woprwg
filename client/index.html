@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.O.P.R. - War Operation Plan Response</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="crypto-overlay"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="blink">></span> W.O.P.R.
+            </div>
+            <div class="subtitle">WAR OPERATION PLAN RESPONSE</div>
+            <div class="security-level">SECURITY LEVEL: TOP SECRET</div>
+        </div>
+        
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-title">NORAD TERMINAL ACCESS</div>
+                <div class="terminal-status">
+                    <span class="status-light"></span>
+                    ACTIVE
+                </div>
+            </div>
+            <div class="terminal">
+                <div id="output" class="terminal-output"></div>
+                <div class="input-line">
+                    <span class="prompt">></span>
+                    <input type="text" id="terminal-input" autocomplete="off" autofocus>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="label">DEFCON:</span>
+                <span id="defcon-level">5</span>
+            </div>
+            <div class="status-item">
+                <span class="label">SYSTEM:</span>
+                <span id="system-status">OPERATIONAL</span>
+            </div>
+            <div class="status-item">
+                <span class="label">LOCATION:</span>
+                <span>CHEYENNE MOUNTAIN</span>
+            </div>
+        </div>
+
+        <!-- Hidden game containers -->
+        <div id="game-container" class="game-container hidden">
+            <div id="tic-tac-toe" class="game hidden">
+                <div class="game-board"></div>
+                <div class="game-controls">
+                    <button id="reset-game">RESET</button>
+                    <button id="exit-game">EXIT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nuclear countdown modal -->
+        <div id="nuclear-countdown" class="modal hidden">
+            <div class="modal-content">
+                <div class="countdown-header">GLOBAL THERMONUCLEAR WAR INITIATED</div>
+                <div class="countdown-timer">30:00</div>
+                <div class="countdown-warning">WARNING: MISSILE LAUNCH SEQUENCE ACTIVATED</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="keypress" src="assets/keypress.mp3" preload="auto"></audio>
+    <audio id="alert" src="assets/alert.mp3" preload="auto"></audio>
+    <audio id="launch" src="assets/launch.mp3" preload="auto"></audio>
+
+    <script src="wopr.js" type="module"></script>
+</body>
+</html>

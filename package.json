@@ -1,0 +1,31 @@
+{
+  "name": "wopr",
+  "version": "1.0.0",
+  "description": "WOPR (War Operation Plan Response) - Interactive Terminal Interface",
+  "main": "client/wopr.js",
+  "scripts": {
+    "start": "http-server ./client -p 3002 --cors -c-1",
+    "dev": "http-server ./client -p 3002 --cors -c-1",
+    "build": "echo \"No build step required\" && exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wopr",
+    "terminal",
+    "game-theory",
+    "strategy",
+    "interactive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/wopr"
+  }
+}
